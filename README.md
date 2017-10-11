@@ -1,18 +1,19 @@
-# 07-forms
+# MS04-07 Forms (No Laravel)
+## 
+### Submission of form with the following inputs:
 
-> MS04-07 Forms
+* ```<input type="text">"```
 
-## Build Setup
+* ```<textarea></textarea>```
+	* **Do not use:** ```<textarea>{{value}}</textarea>``` 
 
-``` bash
-# install dependencies
-npm install
+* ```<input type="checkbox">```
 
-# serve with hot reload at localhost:8080
-npm run dev
+* ```<input type="radio">```
 
-# build for production with minification
-npm run build
-```
+* ```<select><option></option></select>```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+* custom input components:
+	* **Remember:** ```v-model = :value="" + @input=""```
+
+### End of Section 11, lecture 155.
