@@ -1,5 +1,4 @@
 # MS04-07 Forms (No Laravel)
-## 
 ### Submission of form with the following inputs:
 
 * ```<input type="text">"```
