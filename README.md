@@ -14,7 +14,7 @@
 
 * ```<select><option></option></select>```
 
-* custom input components:
+* Custom input components:
 	* **Remember:** ```v-model = :value="" + @input=""```
 
 #### End of Section 11, lecture 155.
