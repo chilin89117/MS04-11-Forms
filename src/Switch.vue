@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
   <div>
     <div id="on" @click="switched(true)" :class="{active: value}">ON</div>
 
@@ -17,7 +17,7 @@
   };
 </script>
 
-<style lang="css">
+<style>
   #on, #off {
     width: 40px;
     height: 20px;
