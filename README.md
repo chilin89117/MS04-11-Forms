@@ -1,7 +1,6 @@
 # MS04-11-Forms
 
 ![App.vue](../assets/a.png?raw=true)
-![Exercise9.vue](../assets/b.png?raw=true)
 
 **Note: edit `main.js` to switch between `App.vue` and `Exercise9.vue`**
 ## `App.vue`
