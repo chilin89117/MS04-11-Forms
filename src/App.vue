@@ -9,34 +9,33 @@
             <label for="email">Email</label>
             <input type="email" id="email" class="form-control" v-model.lazy="userData.email" autofocus>
           </div>
-
           <div class="form-group">
             <label for="password">Password</label>
             <input type="password" id="password" class="form-control" v-model.lazy="userData.password">
           </div>
-
           <div class="form-group">
             <label for="age">Age</label>
             <input type="number" id="age" class="form-control" v-model.lazy.number="userData.age">
           </div>
-
           <div class="form-group">
             <label for="message">Message</label>
             <!-- Interpolation between <textarea>{{ test }}</textarea> doesn't work!-->
-            <textarea id="message" rows="5" class="form-control" v-model.lazy="message"></textarea>
+            <textarea id="message" rows="5" class="form-control" placeholder="Your message" v-model.lazy="message"></textarea>
           </div>
-
           <div class="checkbox">
             <label for="sendmail">
-              <input type="checkbox" id="sendmail" value="SendMail"
-                     v-model="sendMail"> Send Mail
+              <input type="checkbox" id="sendmail" value="SendEMail"
+                     v-model="sendMail"> Send E-Mail
             </label>
-            <label for="sendInfomail">
-              <input type="checkbox" id="sendInfomail" value="SendInfoMail"
-                     v-model="sendMail"> Send Infomail
+            <label for="sendtext">
+              <input type="checkbox" id="sendtext" value="SendTextMsg"
+                     v-model="sendMail"> Send Text Message
+            </label>
+            <label for="sendsnail">
+              <input type="checkbox" id="sendsnail" value="SendSnailMail"
+                     v-model="sendMail"> Send Snail Mail
             </label>
           </div>
-
           <div class="radio">
             <label for="male">
               <input type="radio" id="male" value="Male" v-model="userData.gender"> Male
@@ -45,11 +44,10 @@
               <input type="radio" id="female" value="Female" v-model="userData.gender"> Female
             </label>
           </div>
-
           <div class="form-group">
             <label for="priority">Priority</label>
             <select id="priority" class="form-control" v-model="prioritySelected">
-              <option v-for="priority in priorities">{{priority}}</option>
+              <option v-for="(priority, index) in priorities" :key="index">{{priority}}</option>
             </select>
           </div>
 
@@ -76,7 +74,7 @@
             <p class="message">{{message}}</p>
             <p>Send Mail?</p>
             <ul>
-              <li v-for="item in sendMail">{{item}}</li>
+              <li v-for="(item, index) in sendMail" :key="index">{{item}}</li>
             </ul>
             <p>Gender: {{userData.gender}}</p>
             <p>Priority: {{prioritySelected}}</p>
@@ -104,7 +102,7 @@
         sendMail: [],
         priorities: ['High', 'Medium', 'Low',],
         prioritySelected: 'Low',
-        dataSwitch: true,
+        dataSwitch: false,
         isSubmitted: false,
       };
     },

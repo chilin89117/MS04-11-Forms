@@ -1,7 +1,6 @@
 <template>
   <div>
     <div id="on" @click="switched(true)" :class="{active: value}">ON</div>
-
     <div id="off" @click="switched(false)" :class="{active: !value}">OFF</div>
   </div>
 </template>
